@@ -12,11 +12,10 @@ mydb = pymysql.Connect(
 
 mycursor = mydb.cursor()
 
-<<<<<<< HEAD
+
 mycursor.execute("SELECT * FROM datalog where OPC_IOT_FLOW_TIMESTAMP > now() - interval 1 hour ")
-=======
-mycursor.execute("SELECT * FROM datalog LIMIT 100 ")
->>>>>>> e2dc333... first commit
+
+
 myresult = mycursor.fetchall()
 datalist = list(myresult)
 df = pd.DataFrame(datalist, columns=['ID', 'CHEFF', 'ENERGY', 'FLOW', 'TIME', 'LEVEL', 'PRESS', 'TEMP'])
