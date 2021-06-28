@@ -1,1 +1,1 @@
-web: gunicorn webclient.wsgi
+web: gunicorn scadaweapp.wsgi
